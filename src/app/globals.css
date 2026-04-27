@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFF9F4;
+  --foreground: #3D3D3D;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-pretendard), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-bold py-4 px-6 rounded-chunky shadow-soft active:scale-95 transition-transform;
+}
+
+.btn-secondary {
+  @apply bg-white text-ink font-bold py-3 px-5 rounded-chunky border-2 border-primary/40 active:scale-95 transition-transform;
+}
+
+.card {
+  @apply bg-white rounded-chunky shadow-soft p-6;
+}
+
+.input-field {
+  @apply w-full bg-white border-2 border-primary/30 rounded-chunky px-4 py-4 text-lg text-ink placeholder:text-muted focus:border-primary outline-none transition-colors;
+}
+
+.full-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
